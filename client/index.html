@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nineLeaps_cc</title>
+
+<!-- angular -->
+  
+    
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+
+    <script src="./libraries/Angular/angular-min.js" type="text/javascript"></script>
+    <script src="./libraries/Angular/angular-route.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body ng-app="nineleaps">
+<h1>Main NineLeaps Project</h1>
+
+    <button class="btn btn-info" onclick="window.location.href='./#/table'">Table View</button>
+    <button class="btn btn-info" onclick="window.location.href='./#/list'">List View</button>
+    <button class="btn btn-info">Tree View</button>
+
+    <div ng-view> </div>
+  
+
+
+
+    <script src="angular_router.js"></script>
+    <script src="./main/home/homeController.js"></script>
+    <script src="./main/list/listController.js"></script>
+    <script src="./main/table/tableController.js"></script>
+    <script src="./main/add/addController.js"></script>
+</body>
+</html>
