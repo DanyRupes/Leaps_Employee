@@ -2,4 +2,17 @@
 <div class="" ng-controller="listController">
 
     <h2> List</h2>
+
+    <script type="text/ng-template" id="categoryTree">
+        <a href="#">{{employ.name}}</a> {{employ.desig}}
+        <ul ng-if="employ.workers">
+            <span ng-repeat="employ in employ.workers" >
+            <li ng-if="employ.name != null" ng-include="'categoryTree'">      
+              
+            </li></span>
+        </ul>
+    </script>
+    <ul>
+        <li ng-repeat="employ in employees" ng-include="'categoryTree'"></li>
+    </ul>
 </div>

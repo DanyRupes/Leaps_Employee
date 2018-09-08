@@ -6,6 +6,6 @@ var router = require('./router.js')
 app.use('/',router)
 
 
-app.listen(80,()=>{
-    console.log("http://localhost:80")
+app.listen(9000,()=>{
+    console.log("http://localhost:9000")
 })

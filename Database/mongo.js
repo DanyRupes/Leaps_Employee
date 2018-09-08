@@ -11,17 +11,22 @@ mongoose.connection.on('connected',function () {
 mongoose.connection.on('error', function(){
     console.log("error connecting db")
 })
-var profileSchema = mongoose.Schema({
-
+var emptree= mongoose.Schema({
     name :  String,
     desig :  String,
     manager : String,
-    workers : [{
-        desigg : String,
-        name : String
-    }]
+    workers : Array
+})
+
+var profileSchema =  mongoose.Schema({
+    all : [{
+        name : String,
+        desig : String,
+        manager : String,
+        path : String,}]
 })
 
 
+var emptree = mongoose.model('emptree',emptree)
 var profile = mongoose.model('profile',profileSchema)
-module.exports = {profile : profile}
+module.exports = {emptree : emptree,profile : profile}
