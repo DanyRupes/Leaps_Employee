@@ -1,0 +1,63 @@
+
+<style>
+    .show {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+table td{
+    border: 0.2px solid gray;
+
+}
+table h2{
+    border: 0.2px solid gray;
+
+}
+table td{
+border: 0.2px solid gray;
+}
+td{
+    padding: 0;
+    padding-right: 40px;
+    margin: auto;
+    text-align: center;
+}
+</style>
+<body ng-controller="showEmpController">
+<div class="show">
+        <table>
+            <tr >
+                <td  >
+                   <h4 ng-bind="profile.name"></h4>
+                </td>
+                <td>
+                    <h4>Employee</h4>
+                </td>
+            </tr>
+
+            <tr class="eada">
+                    <td>
+                            <h4>Designation</h4>
+                        </td>
+                    <td>
+                       <h4 ng-bind="profile.desig"></h4>
+                    </td>
+
+            </tr>
+            <tr class="eada">
+                    <td>
+                            <h4>Manager</h4>
+                        </td>
+                    <td>
+                       <h4 ng-bind="profile.manager"></h4>
+                    </td>
+            </tr>
+            <tr style="border: none !important">
+                <td style="border: none !important;width: 100%" >
+                    <button ng-click="editProfile();" class="btn btn-primary" style="width: 100%;padding-top: 20p;margin-top: 13px;">Edit</button>
+                </td>
+            </tr>
+        </table>
+</div>
+</body>
