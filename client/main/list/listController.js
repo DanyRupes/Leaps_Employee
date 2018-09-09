@@ -1,5 +1,5 @@
 var app = angular.module('list',[])
-app.controller('listController',function($scope,$http){
+app.controller('listController',function($scope,$http,$rootScope){
 
    
             console.log("good add")
@@ -14,6 +14,7 @@ app.controller('listController',function($scope,$http){
                 console.log("success to node")
                 console.log(result)
                 $scope.employees = result.data
+                
             }).catch((err) => {
                 console.log(err)
             });

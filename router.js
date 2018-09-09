@@ -379,7 +379,43 @@ mongoose.emptree.findOneAndUpdate({name : "Anchal"},{$set:{desig:"CEO",manager:"
               res.send("err")
         });
        })
+    app.get('/table', function (req, res) {
+      mongoose.profile.find()
+      .then((result) => {
+        res.send(result)
+      }).catch((err) => {
+        console.log(err)
+        res.send("error")
+      });
+    })  
 
+
+    app.post('/add', function (req, res) { 
+      console.log(req.body)
+      mongoose.profile.findOneAndUpdate({},{$addToSet:{all :{
+        name : req.body.name,
+        desig : req.body.desig,
+        manager : req.body.manager,
+      }}})
+      .then((result) => {
+        res.status(200).send("okay")
+      }).catch((err) => {
+        console.log(err)
+        res.status(404).send(err)
+      });
+     })
+
+
+    app.post('/showMe', function (req, res) { 
+      // console.log(req.body)
+      mongoose.profile.findOne({"all.name":req.body.name},{"all.name.$":1})
+      .then((result) => {
+        res.status(200).send(result)
+      }).catch((err) => {
+        console.log(err)
+        res.status(404).send("err")
+      });
+     })
 
 module.exports = app;
 

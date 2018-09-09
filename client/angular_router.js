@@ -1,4 +1,4 @@
-var app = angular.module('nineleaps',['ngRoute','home','table','list','add'])
+var app = angular.module('nineleaps',['ngRoute','home','table','list','add','showEmp','editprofile'])
 
 
 app.config(function ($routeProvider,$locationProvider) { 
@@ -19,6 +19,14 @@ $routeProvider
 .when('/add',{
     templateUrl : '/main/add/add.html',
     controller : 'addController'
+})
+.when('/show/employee',{
+    templateUrl : '/main/show_emp/show.html',
+    controller : 'showEmpController'
+})
+.when('/edit/profile',{
+    templateUrl : '/main/edit/edit.html',
+    controller : 'editController.js'
 })
 .otherwise('/',{
     templateUrl : '/main/home/home.html',

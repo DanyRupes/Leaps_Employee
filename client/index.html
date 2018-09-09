@@ -21,12 +21,13 @@
 
 </head>
 <body ng-app="nineleaps">
-<h1>Main NineLeaps Project</h1>
-
-    <button class="btn btn-info" onclick="window.location.href='./#/table'">Table View</button>
-    <button class="btn btn-info" onclick="window.location.href='./#/list'">List View</button>
-    <button class="btn btn-info">Tree View</button>
-
+        <h1 style="    display: flex;
+        justify-content: center;">Main NineLeaps Project</h1>
+            <div class="navigate">
+            <button class="btn btn-info" onclick="window.location.href='./#/table'">Table View</button>
+            <button class="btn btn-info" onclick="window.location.href='./#/list'">List View</button>
+            <button class="btn btn-info">Tree View</button>
+        </div>
     <div ng-view> </div>
   
 
@@ -37,5 +38,7 @@
     <script src="./main/list/listController.js"></script>
     <script src="./main/table/tableController.js"></script>
     <script src="./main/add/addController.js"></script>
+    <script src="./main/show_emp/showEmpController.js"></script>
+    <script src="./main/edit/editController.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+.navigate {
+    display: grid;
+    justify-content: center;
+}
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    text-align: center;
+    /* text-align: center; */
+    width: 300px;
+    margin-bottom: 20px;
+} 

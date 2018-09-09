@@ -1,8 +1,62 @@
 
 <div ng-app="tableController">
 
-    <h2>This is table</h2>
+    <h2>Employee table</h2>
 
 
-    <button class="btn btn-default" onclick="window.location.href='/#/add'"> Add</button>
+    <button style="    float: right;
+    margin-right: 3%;" class="btn btn-default" onclick="window.location.href='/#/add'"> Add</button>
+
+    <style>
+    table {
+        padding: 60px;
+    width: 100%;
+    background-color: transparent;
+
+    margin-top: 20px;
+    border-collapse:collapse;
+    border: 1px solid #ddd; 
+    }
+    th {
+        font-size: 20px;
+    }
+    </style>
+
+    <table border="1|0">
+        <th>
+            <tr>
+                <td>
+                    S.No
+                </td>
+                <td>
+                    Employee Name
+                </td>
+                <td>
+                    Designation
+                </td>
+                <td>
+                    Manager
+                </td>
+
+            </tr>
+        </th>
+
+        <tr ng-repeat="prof in profile">
+            <td>
+                {{$index+1}}
+            </td>
+            <td>
+                {{prof.name}}
+            </td>
+            <td>
+                {{prof.desig}}
+            </td>
+            <td>
+                {{prof.manager}}
+            </td>
+            <td>
+                <a ng-click="getEmployee(prof);">View</a>
+            </td>
+        </tr>
+    </table>
 </div>

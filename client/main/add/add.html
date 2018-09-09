@@ -1,7 +1,27 @@
  
 <div class="" ng-controller="addController">
+<style>
 
-        <h2> Add Employees</h2>
+    form {
+        width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    }
+    div {
+        padding-bottom: 3%;
+    }
+    label {
+        display: table-footer-group;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    margin-right: 50px;
+    }
+</style>
+        <h2 style="    text-align: center;"> Add Employees</h2>
 
 
         <form class="" ng-submit="addSubmit($e)">
