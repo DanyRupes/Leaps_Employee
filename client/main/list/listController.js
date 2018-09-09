@@ -20,4 +20,12 @@ app.controller('listController',function($scope,$http,$rootScope){
             });
     
 
+            $scope.showMe = function (emp,desig) { 
+                console.log(emp)
+                console.log(desig)
+                $rootScope.showprofileName = emp
+                $rootScope.showprofileDesig = desig
+                window.location.href="#/show/employee"
+             }
+
 })

@@ -4,7 +4,7 @@
     <h2> List</h2>
 
     <script type="text/ng-template" id="categoryTree">
-        <a href="#">{{employ.name}}</a> {{employ.desig}}
+        <a href="" ng-click="showMe(employ.name,employ.desig)">{{employ.name}}</a> {{employ.desig}}
         <ul ng-if="employ.workers">
             <span ng-repeat="employ in employ.workers" >
             <li ng-if="employ.name != null" ng-include="'categoryTree'">      

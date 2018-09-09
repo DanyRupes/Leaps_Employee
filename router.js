@@ -417,6 +417,18 @@ mongoose.emptree.findOneAndUpdate({name : "Anchal"},{$set:{desig:"CEO",manager:"
       });
      })
 
+
+     app.post('/update', function (req, res) {
+          console.log(req.body)
+          mongoose.profile.findOneAndUpdate({"all.name":req.body.o_name},{$set:{"all.$.name" : req.body.n_name,"all.$.desig" : req.body.n_desig,
+          "all.$.manager":req.body.manager}})
+          .then((result) => {
+            console.log(result)
+            res.status(200).send("okay")
+          }).catch((err) => {
+            res.status(401).send(err)
+          });
+      })
 module.exports = app;
 
 

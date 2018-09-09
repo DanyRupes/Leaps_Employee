@@ -23,6 +23,7 @@ app.controller('addController',function($scope,$http){
             console.log("success to node")
             console.log(result)
             alert("Employee Added Successfully")
+            window.location.href="/#/table"
         }).catch((err) => {
             console.log(err)
         });

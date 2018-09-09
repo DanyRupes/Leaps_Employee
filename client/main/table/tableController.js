@@ -18,6 +18,7 @@ app.controller('tableController',function ($scope,$http,$rootScope) {
     $scope.getEmployee = function (prof) { 
       console.log(prof.name)
       $rootScope.showprofileName = prof.name
+      $rootScope.showprofileDesig = prof.desig
       window.location.href="#/show/employee"
      }
 

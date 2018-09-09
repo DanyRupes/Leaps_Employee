@@ -1,17 +1,52 @@
 
+<style>
+    form {
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    }
+    .formin {
+        margin-bottom: 20px;
+        display: flex;
+    flex-direction: column;
 
+    }
+    .scrollable-menu {
+        height: auto;
+    max-height: 220px;
+    overflow-x: hidden;
+    /* width: 100px; */
+}
+ul li:hover {
+    background-color: gray;
+} 
+
+.submit:focus {
+    background-color: gainsboro;
+    outline: none
+}
+</style>
 <div ng-controller="editController">
 
 
-    <form class="form-group-lg">
-        <div class="formin"><input type="text" class="form-control" ></div>
-        <div class="formin"><input type="text" class="form-control" ></div>
+    <form class="form-group" style="    margin-top: 50px;">
+
+        <div class="formin"><input value="{{showprofileName}}" ng-model="showprofileName"  type="text" class="form-control" required ></div>
+        <div class="formin"><input value="{{showprofileDesig}}" ng-model="showprofileDesig"   type="text"  class="form-control" required></div>
         <div class="formin">
-                <select>
-                    <!-- <option ng-repeat="selet in selections"></option> -->
-             </select> 
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class=" dropdown-header" ng-bind="set_man"> MANAGER</span>
+                    </button>
+      
+                    <ul class="dropdown-menu scrollable-menu"  role="menu" >
+                        <li ng-repeat="select in selections"ng-click="setMe(this)">{{select.name}}</li>   
+                    </ul>
+                </div>   
+                <button style="margin-top: 20px" type="submit" class="submit btn btn-group-lg" ng-click="updateEmp();">Update</button>
         </div>
-        <button type="submit" class="btn btn-group-lg">Update</button>
     </form>
 
 

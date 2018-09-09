@@ -1,0 +1,7 @@
+Needed : nodejs, mongodb 3.6 above 
+
+1 .npm install
+2.in terminal_run   node server.js
+3. visit http://localhost:80
+
+Thank

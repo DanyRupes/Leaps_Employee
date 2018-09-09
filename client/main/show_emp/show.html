@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 38px;
 }
 table td{
     border: 0.2px solid gray;
@@ -23,21 +24,25 @@ td{
     margin: auto;
     text-align: center;
 }
+.side{
+    color: grey;
+}
 </style>
 <body ng-controller="showEmpController">
 <div class="show">
         <table>
             <tr >
-                <td  >
-                   <h4 ng-bind="profile.name"></h4>
+                <td class="side">
+                        <h4>Employee</h4>
+                   
                 </td>
                 <td>
-                    <h4>Employee</h4>
+                        <h4 ng-bind="profile.name"></h4>
                 </td>
             </tr>
 
             <tr class="eada">
-                    <td>
+                    <td class="side">
                             <h4>Designation</h4>
                         </td>
                     <td>
@@ -46,7 +51,7 @@ td{
 
             </tr>
             <tr class="eada">
-                    <td>
+                    <td class="side">
                             <h4>Manager</h4>
                         </td>
                     <td>

@@ -2,6 +2,7 @@ var app = angular.module('showEmp',[])
 
 app.controller('showEmpController', function ($scope,$http,$rootScope) { 
     console.log("show emp")
+    console.log($rootScope.showprofileName)
 
 
     // $scope.getEmployee = function (prof) { 
